@@ -59,8 +59,9 @@ function draw() {
     monkey.velocityY=-10;
   }
  monkey.velocityY= monkey.velocityY+1;
-    if(foodGroup.isTouching(monkey)) {
-       foodGroup.destroyEach();
+for(var i=0;i<foodGroup.length;i++){
+      if(foodGroup.get(i).isTouching(monkey)){
+        foodGroup.get(i).destroy()
        score = score+2;
     }
  }
